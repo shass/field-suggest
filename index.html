@@ -1,0 +1,5 @@
+<div class="b-fields" id="app">
+  <input class="b-fields__name" type="text" v-model.trim="name" placeholder="Фамилия Имя Отчество">
+  <input class="b-fields__suggest" type="text" :placeholder="formattedName" v-show="showSuggest" ref="suggest" disabled>
+  <span class="b-fields__calculation" ref="calculation">{{name}}</span>
+</div>

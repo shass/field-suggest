@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  font: 12px Tahoma;
+}
+
+body {
+  padding: 20px;
+}
+
+.b-fields {
+  position: relative;
+
+  &__name,
+  &__suggest {
+    background-color: transparent;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &__suggest {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+  }
+
+  &__calculation {
+    border: 0;
+    padding: 0;
+    position: absolute;
+    visibility: hidden;
+    white-space: nowrap;
+    z-index: -1;
+
+  }
+}
