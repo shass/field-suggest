@@ -37,18 +37,12 @@ new Vue({
     * Capitalize first letter of each word
     */
     capitalizeFirstLetter(str) {
-      let splitChars = [' ', '-'];
+      let pattern = /(^|[-\s])([a-zа-яё])/g;
       let normalizedName = str.toLowerCase();
 
-      for (let splitChar of splitChars) {
-        normalizedName = normalizedName.split(splitChar);
-
-        for (let i = 0; i < normalizedName.length; i++) {
-          normalizedName[i] = normalizedName[i].charAt(0).toUpperCase() + normalizedName[i].substring(1);
-        }
-
-        normalizedName = normalizedName.join(splitChar);
-      }
+      normalizedName = normalizedName.replace(pattern, function($2){
+      	return $2.toUpperCase();
+      });
 
       return normalizedName;
     },
