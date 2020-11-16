@@ -22,13 +22,13 @@ new Vue({
 
       this.name = this.capitalizeFirstLetter(this.name);
 
-      return oneWord.test(this.name) ?
-        this.name + ' Имя Отчество' :
-        twoWords.test(this.name) ?
-          this.name + ' Отчество' :
-          this.name ?
-            this.name :
-            'Фамилия Имя Отчество';
+      return oneWord.test(this.name) 
+        ? this.name + ' Имя Отчество'
+        : twoWords.test(this.name) 
+          ? this.name + ' Отчество' 
+          : this.name 
+            ? this.name 
+            : 'Фамилия Имя Отчество';
     }
   },
 
